@@ -186,7 +186,8 @@
         function buildContext() {
             const ctx = {
                 UserLanguage: { value: (currentLanguage === "fr" ? "French" : "English"), isDisplayable: true },
-                Brand: { value: brandValue, isDisplayable: true }
+                Brand: { value: brandValue, isDisplayable: true },
+                Email: { value: userId, isDisplayable: true }
             };
             if (userName) {
                 ctx.UserName = { value: userName, isDisplayable: true };
