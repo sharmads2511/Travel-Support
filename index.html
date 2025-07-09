@@ -128,9 +128,10 @@
         function updateUserId() {
             const acc = clientApplication.getActiveAccount();
             if (!acc) { userId = ""; return; }
-            userId = ("My-custom-prefix" + acc.homeAccountId).substr(0, 64);
-            if (userId.includes(".")) userId = userId.split(".")[0];
-            if (userId.length > 36) userId = userId.slice(userId.length - 36);
+            // userId = ("My-custom-prefix" + acc.homeAccountId).substr(0, 64);
+            // if (userId.includes(".")) userId = userId.split(".")[0];
+            // if (userId.length > 36) userId = userId.slice(userId.length - 36);
+            userId=acc.username;
         }
 
         /* ---------- UI TEXTS ---------- */
@@ -323,13 +324,13 @@
         data-font-family-override="Monotype Corsiva" data-color-override="#0000FF" data-customization-callback="lcw">
         </script> -->
 
-    <script id="Microsoft_Omnichannel_LCWidget"
+        <script id="Microsoft_Omnichannel_LCWidget"
         src="https://oc-cdn-ocprod.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js"
-        data-app-id="66b11a80-ef91-4d54-9355-9d3c190b54af" data-lcw-version="prod"
+        data-app-id="1b476da9-f98b-4331-b03b-76a5d8dd28c3" data-lcw-version="prod"
         data-org-id="ef467da8-1457-f011-8ee5-000d3ab5d45b"
         data-org-url="https://m-ef467da8-1457-f011-8ee5-000d3ab5d45b.eu.omnichannelengagementhub.com"
         data-font-family-override="Monotype Corsiva" data-color-override="#0000FF" data-customization-callback="lcw">
-        </script>
+        </script> 
 
     <script>
 
